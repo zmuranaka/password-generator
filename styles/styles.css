@@ -1,0 +1,94 @@
+/*
+File: styles.css
+Zachary Muranaka
+Styles for the password generator index.html
+*/
+
+/* Structural styles */
+
+body {
+    width: 100%;
+    min-width: 320px; /* Narrowest screen in common use */
+    margin: 0;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    word-wrap: break-word; /* Makes it so very long passwords do not overflow the screen */
+}
+
+h1 { font-size: 5vh }
+
+p {
+    margin: 5vh auto;
+    font-size: 3vh;
+}
+
+.formRow {
+    width: 95%;
+    margin: 2vh auto;
+    text-align: left;
+}
+
+/* Input styles */
+
+label {
+    margin: 0;
+    padding: 0;
+    font-size: 2.5vh;
+}
+
+input[type=number] {
+    width: 7.5vh;
+    height: 2.5vh;
+    font-size: 2vh;
+}
+
+input[type=checkbox] {
+    width: 2.5vh;
+    height: 2.5vh;
+}
+
+input[type=number], input[type=checkbox] {
+    position: absolute;
+    right: 2.5%;
+}
+
+input[type=button] {
+    width: 95%;
+    height: 8vh;
+    padding: 0;
+    background: green;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-size: 4vh;
+}
+
+input[type=button]:hover { background: yellowgreen }
+
+input[type=button]:active {
+    background: yellow;
+    color: darkgreen;
+}
+
+#password { color: gray }
+
+/* Footer styles */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 1em;
+    background: linear-gradient(rgb(0, 0, 204), midnightblue);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    font-variant: small-caps;
+}
+
+footer a {
+    display: inline-block;
+    margin: 1em 1em 1em 0;
+    color: white;
+    text-decoration: none;
+}
