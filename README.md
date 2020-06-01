@@ -20,9 +20,9 @@ Websites that helped me create the project:
 http://www.asciitable.com/  
 &nbsp;&nbsp;&nbsp;&nbsp;This website was a helpful reference when checking what ASCII codes corresponded to which characters.  
 https://jshint.com/  
-&nbsp;&nbsp;&nbsp;&nbsp;JSHint was a helpful tool when checking that my JavaScript syntax was correct. 
+&nbsp;&nbsp;&nbsp;&nbsp;JSHint was a helpful tool when checking that my JavaScript syntax was correct.  
 https://api.jquery.com/  
-&nbsp;&nbsp;&nbsp;&nbsp;The jQuery API was a helpful tool for checking my jQuery functions and general syntax.  
+&nbsp;&nbsp;&nbsp;&nbsp;The jQuery API was a helpful tool when checking my jQuery functions and general syntax.  
 https://www.w3schools.com/  
 &nbsp;&nbsp;&nbsp;&nbsp;W3Schools was very helpful when I was checking that my syntax was correct and as a general reference.
 

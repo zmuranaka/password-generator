@@ -8,7 +8,13 @@ $(function()
 {
     "use strict";
 
-    // Generates a password and displays the results
+    // Returns a random member of the argument array as a char
+    function randomChar(array) { return String.fromCharCode(array[Math.floor(Math.random() * array.length)]); }
+
+    // Returns the password length if it is within the acceptable range or 0 if it is not
+    function validPasswordLength(length) { return length > 0 && length < 65 ? length : 0; }
+
+    // Generates a password and displays the results when the submit button is clicked
     $('#submitBtn').click(
     function()
     {
@@ -41,20 +47,10 @@ $(function()
         }
 
         // Generate and display the random password
-        for(let i = 0; i < validPasswordLength(); i++)
+        for(let i = 0; i < validPasswordLength($('#numberOfChars').val()); i++)
             $('#password').append(randomChar(charRange));
         
         if($('#password').text() === '')
             $('#password').text("Passwords must be between 1 and 64 characters");
     });
-
-    // Returns a random member of the argument array as a char
-    function randomChar(array) { return String.fromCharCode(array[Math.floor(Math.random() * array.length)]); }
-
-    // Returns the password length if it is within the acceptable range or 0 if it is not
-    function validPasswordLength()
-    {
-        return ($('#numberOfChars').val() > 0 && $('#numberOfChars').val() < 65) ?
-        $('#numberOfChars').val() : 0;
-    }
 });
