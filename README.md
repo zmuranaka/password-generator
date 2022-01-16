@@ -6,30 +6,30 @@ This is a simple web application that utilizes jQuery and ANU's quantum random n
 
 ## Directories:
 
-images\
-&nbsp;&nbsp;&nbsp;&nbsp;This folder contains the social media logos.\
-scripts\
-&nbsp;&nbsp;&nbsp;&nbsp;This folder contains the JavaScript (using jQuery) that generates the passwords.\
-styles\
+images<br>
+&nbsp;&nbsp;&nbsp;&nbsp;This folder contains the social media logos.<br>
+scripts<br>
+&nbsp;&nbsp;&nbsp;&nbsp;This folder contains the JavaScript (using jQuery) that generates the passwords.<br>
+styles<br>
 &nbsp;&nbsp;&nbsp;&nbsp;This folder contains the stylesheet for the website.
 
 ## Sources:
 
-I got the GitHub logo from [GitHub](https://github.com/logos) and I created the mail and link logos in Adobe Photoshop.\
-Websites that helped me create the project:\
-https://qrng.anu.edu.au/\
-&nbsp;&nbsp;&nbsp;&nbsp;This website is what provides the API that provides true random numbers based on quantum fluctuations.\
-http://www.asciitable.com/\
-&nbsp;&nbsp;&nbsp;&nbsp;This website was a helpful reference when checking what ASCII codes corresponded to which characters.\
-https://jshint.com/\
-&nbsp;&nbsp;&nbsp;&nbsp;JSHint was a helpful tool when checking that my JavaScript syntax was correct.\
-https://api.jquery.com/\
-&nbsp;&nbsp;&nbsp;&nbsp;The jQuery API was a helpful tool when checking my jQuery functions and general syntax.\
-https://www.w3schools.com/\
+I got the GitHub logo from [GitHub](https://github.com/logos) and I created the mail and link logos in Adobe Photoshop.<br>
+Websites that helped me create the project:<br>
+https://qrng.anu.edu.au/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;This website is what provides the API that provides true random numbers based on quantum fluctuations.<br>
+http://www.asciitable.com/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;This website was a helpful reference when checking what ASCII codes corresponded to which characters.<br>
+https://jshint.com/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;JSHint was a helpful tool when checking that my JavaScript syntax was correct.<br>
+https://api.jquery.com/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The jQuery API was a helpful tool when checking my jQuery functions and general syntax.<br>
+https://www.w3schools.com/<br>
 &nbsp;&nbsp;&nbsp;&nbsp;W3Schools was very helpful when I was checking that my syntax was correct and as a general reference.
 
 ## Author:
 
-Zachary Muranaka\
-&nbsp;&nbsp;&nbsp;&nbsp;zacharymuranaka@mail.weber.edu\
+Zachary Muranaka<br>
+&nbsp;&nbsp;&nbsp;&nbsp;zacharymuranaka@mail.weber.edu<br>
 &nbsp;&nbsp;&nbsp;&nbsp;https://zmuranaka.github.io
