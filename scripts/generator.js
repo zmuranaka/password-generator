@@ -1,56 +1,57 @@
 /*
 File: generator.js
 Zachary Muranaka
-Generates a random password based on the user's input using jQuery
+Generates a random password based on the user's input using jQuery and the ANU QRNG API https://qrng.anu.edu.au/contact/api-documentation/
 */
 
-$(function()
+$(() =>
 {
     "use strict";
 
-    // Returns a random member of the argument array as a char
-    function randomChar(array) { return String.fromCharCode(array[Math.floor(Math.random() * array.length)]); }
-
-    // Returns the password length if it is within the acceptable range or 0 if it is not
-    function validPasswordLength(length) { return length > 0 && length < 65 ? length : 0; }
-
     // Generates a password and displays the results when the submit button is clicked
-    $('#submitBtn').click(
-    function()
+    $('#submitBtn').click(() =>
     {
-        // ASCII codes for lowercase letters
-        const charRange =
-        [
-            97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109,
-            110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122
-        ];
+        // Passwords must be anywhere 1 to 128 characters long
+        // If the user requests a password outside this range, tell them and return
+        const passwordLength = $('#numberOfChars').val();
+        if (passwordLength < 1 || passwordLength > 128)
+        {
+            $('#password').text("Passwords must be 1 to 128 characters");
+            return;
+        }
 
-        $('#password').text('');
+        // ASCII codes for lowercase letters
+        let charRange = [97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122];
 
         if($('#nums').is(':checked'))
         {
-            // Push the ASCII codes for numbers onto charRange
-            for(let i = 48; i <= 57; i++) charRange.push(i);
+            // Append the ASCII codes for numbers onto charRange
+            charRange = charRange.concat([48, 49, 50, 51, 52, 53, 54, 55, 56, 57]);
         }
         if($('#mixCase').is(':checked'))
         {
-            // Push the ASCII codes for uppercase letters onto charRange
-            for(let i = 65; i <= 90; i++) charRange.push(i);
+            // Append the ASCII codes for uppercase letters onto charRange
+            charRange = charRange.concat([65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90]);
         }
         if($('#symbols').is(':checked'))
         {
-            // Push the ASCII codes for symbols onto charRange
-            for(let i = 33; i <= 47; i++) charRange.push(i);
-            for(let i = 58; i <= 64; i++) charRange.push(i);
-            for(let i = 91; i <= 96; i++) charRange.push(i);
-            for(let i = 123; i <= 126; i++) charRange.push(i);
+            // Append the ASCII codes for symbols onto charRange
+            charRange = charRange.concat([33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]);
+            charRange = charRange.concat([58, 59, 60, 61, 62, 63, 64]);
+            charRange = charRange.concat([91, 92, 93, 94, 95, 96]);
+            charRange = charRange.concat([123, 124, 125, 126]);
         }
 
-        // Generate and display the random password
-        for(let i = 0; i < validPasswordLength($('#numberOfChars').val()); i++)
-            $('#password').append(randomChar(charRange));
-        
-        if($('#password').text() === '')
-            $('#password').text("Passwords must be between 1 and 64 characters");
+        $('#password').text(''); // Clear out the old password text
+        // Call the ANU Quantum Random Number Generator API requesting an array of random numbers the size of the password requested
+        // The numbers in the array returned are all 8-bit numbers (0 to 255) - therefore, they must be converted into a valid index
+        // The formula to translate into a valid index is number * array length / 256
+        $.getJSON(`https://qrng.anu.edu.au/API/jsonI.php?length=${passwordLength}&type=uint8`, (returnedJSON) =>
+        {
+            for (let i = 0; i < returnedJSON.data.length; i++)
+            {
+                $('#password').append(String.fromCharCode(charRange[Math.floor(returnedJSON.data[i] * charRange.length / 256)]));
+            }
+        });
     });
 });
