@@ -32,5 +32,5 @@ Author
 
 Zachary Muranaka
 
-*   zacharymuranaka@mail.weber.edu
+*   zmuranaka@gmail.com
 *   [https://zmuranaka.github.io](https://zmuranaka.github.io)
