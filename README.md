@@ -1,5 +1,5 @@
-Quantum Random Number Generator
-===============================
+Quantum Random Password Generator
+=================================
 
 _Passwords, generated truly randomly_
 
