@@ -92,3 +92,8 @@ footer a {
     color: white;
     text-decoration: none;
 }
+
+/* Hide footer for small screen sizes */
+@media screen and (max-height: 428px), screen and (max-aspect-ratio: 9/16) {
+    footer { display: none }
+}
