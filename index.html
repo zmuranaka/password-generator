@@ -11,7 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Quantum Random Password Generator</title>
     <link href="styles/styles.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scripts/generator.js" defer></script>
 </head>
 
@@ -21,26 +20,26 @@
 
     <p>Select the options you want and click submit to generate a strong, truly random password!</p>
 
-    <div class="formRow">
+    <div class="inputRow">
         <label for="numberOfChars">Number of characters</label>
         <input type="number" id="numberOfChars" min="1" max="128" value="12">
     </div>
 
-    <div class="formRow">
+    <div class="inputRow">
         <label for="nums">Include numbers (i.e. 1234)</label>
         <input type="checkbox" id="nums">
     </div>
-    
-    <div class="formRow">
+
+    <div class="inputRow">
         <label for="mixCase">Include mixed case (i.e. AbCd)</label>
         <input type="checkbox" id="mixCase">
     </div>
-    
-    <div class="formRow">
+
+    <div class="inputRow">
         <label for="symbols">Include symbols (i.e. !@#$)</label>
         <input type="checkbox" id="symbols">
     </div>
-    
+
     <input type="button" id="submitBtn" value="Submit">
 
     <p id="password">Your password appears here</p>
