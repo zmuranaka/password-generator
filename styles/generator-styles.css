@@ -1,0 +1,36 @@
+/*
+File: generator-styles.css
+Zachary Muranaka
+Styles unique to the password generator (generator.html)
+*/
+
+.inputRow {
+    margin: 2vh auto;
+    text-align: left;
+}
+
+/* Input styles */
+
+label {
+    margin: 0;
+    padding: 0;
+    font-size: 2.5vh;
+}
+
+input[type=number] {
+    width: 7.5vh;
+    height: 2.5vh;
+    font-size: 2vh;
+}
+
+input[type=checkbox] {
+    width: 2.5vh;
+    height: 2.5vh;
+}
+
+input[type=number], input[type=checkbox] {
+    position: absolute;
+    right: 2.5%;
+}
+
+#password { color: gray }

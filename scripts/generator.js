@@ -52,11 +52,11 @@ async function getPassword()
         return;
     });
 
-    for (let i = 0; i < responseJSON.data.length; i++)
+    for (let randomNumber of responseJSON.data)
     {
         // The numbers in the array returned are all 8-bit numbers (0 to 255) - therefore, they must be converted into a valid index
         // The formula to translate into a valid index is number * array length / 256
-        passwordDisplay.innerText += String.fromCharCode(requestedASCII[Math.floor(responseJSON.data[i] * requestedASCII.length / 256)]);
+        passwordDisplay.innerText += String.fromCharCode(requestedASCII[Math.floor(randomNumber * requestedASCII.length / 256)]);
     }
 }
 
