@@ -20,7 +20,7 @@ main {
     padding: 0;
 }
 
-main *, footer { width: 100% }
+main * { width: 100% }
 
 h1 { font-size: 5vh }
 
@@ -54,32 +54,11 @@ input[type=button]:active {
 
 #password { color: gray }
 
-/* Footer and nav styles */
+/* Nav styles */
 
-nav, footer { position: absolute }
+nav { position: absolute }
 
 nav {
     top: 0;
     right: 0;
-}
-
-footer {
-    bottom: 0;
-    padding-top: 1em;
-    background: linear-gradient(rgb(0, 0, 204), midnightblue);
-    color: white;
-    font-size: 0.8em;
-    font-variant: small-caps;
-}
-
-footer a {
-    display: inline-block;
-    margin: 1em 1em 1em 0;
-    color: white;
-    text-decoration: none;
-}
-
-/* Hide footer for small screen sizes */
-@media screen and (max-height: 428px), screen and (max-aspect-ratio: 9/16) {
-    footer { display: none }
 }
