@@ -22,6 +22,11 @@ You can generate passwords as simple or complex as you like.
 *   Can include numbers
 *   Can include symbols
 
+Known issues
+------------
+
+* The Australian National University has deprecated their original API and is now rate limiting requests, so generating more than a single password per minute no longer works, as descirbed [here](https://github.com/zmuranaka/password-generator/issues/1#issuecomment-1698420609).
+
 Password Improver
 =================
 
@@ -46,4 +51,4 @@ Author
 Zachary Muranaka
 
 *   zmuranaka@gmail.com
-*   [https://zmuranaka.github.io](https://zmuranaka.github.io)
+*   [zmuranaka.dev](https://zmuranaka.dev)
